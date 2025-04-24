@@ -24,7 +24,7 @@ const projectData = [
   {
     name: "Portfolio Website",
     description: `A personal portfolio website created using React.js, CSS, and modern web design practices. It showcases my projects, skills, education, and contact information. The layout includes interactive animations, a responsive design, and seamless navigation using React Router.`,
-    link: "https://portflio2024.netlify.app/", 
+    link: "https://portflio2024.netlify.app/",
   },
 ];
 
@@ -35,11 +35,16 @@ const Projects = () => {
         .projects-section {
           background-color: #000;
           color: #fff;
-          padding: 2rem;
+          padding: 2rem 0;
           min-height: 100vh;
           font-family: 'Segoe UI', sans-serif;
+          width: 100%; /* Full browser width */
+        }
+
+        .projects-wrapper {
           max-width: 1200px;
           margin: 0 auto;
+          padding: 0 1rem;
         }
 
         .projects-title {
@@ -54,7 +59,6 @@ const Projects = () => {
           flex-wrap: wrap;
           justify-content: center;
           gap: 3rem;
-          padding: 0 1rem;
         }
 
         .project-card {
@@ -134,18 +138,24 @@ const Projects = () => {
       `}</style>
 
       <div id="projects" className="projects-section">
-        <h1 className="projects-title">My Projects</h1>
-
-        <div className="projects-container">
-          {projectData.map((project, index) => (
-            <div key={index} className="project-card">
-              <h2 className="project-title">{project.name}</h2>
-              <p className="project-description">{project.description}</p>
-              <a href={project.link} className="project-link" target="_blank" rel="noopener noreferrer">
-                View Project
-              </a>
-            </div>
-          ))}
+        <div className="projects-wrapper">
+          <h1 className="projects-title">My Projects</h1>
+          <div className="projects-container">
+            {projectData.map((project, index) => (
+              <div key={index} className="project-card">
+                <h2 className="project-title">{project.name}</h2>
+                <p className="project-description">{project.description}</p>
+                <a
+                  href={project.link}
+                  className="project-link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  View Project
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </>
