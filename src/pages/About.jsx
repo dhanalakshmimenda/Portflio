@@ -158,7 +158,7 @@ const About = () => {
               <FaGithub />
             </a>
             <a
-              href="https://linkedin.com/in/your-linkedin-id"
+              href="https://www.linkedin.com/in/menda-dhanalakshmi-454898259/"
               target="_blank"
               rel="noopener noreferrer"
             >
