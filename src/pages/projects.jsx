@@ -24,7 +24,7 @@ const projectData = [
   {
     name: "Portfolio Website",
     description: `A personal portfolio website created using React.js, CSS, and modern web design practices. It showcases my projects, skills, education, and contact information. The layout includes interactive animations, a responsive design, and seamless navigation using React Router.`,
-    link: "https://portflio2024.netlify.app/",
+    link: "https://portflio-2003.netlify.app/",
   },
 ];
 
@@ -32,19 +32,26 @@ const Projects = () => {
   return (
     <>
       <style>{`
+        * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+        }
+
         .projects-section {
           background-color: #000;
           color: #fff;
-          padding: 2rem 0;
+          padding: 2rem 1rem;
           min-height: 100vh;
           font-family: 'Segoe UI', sans-serif;
-          width: 100%; /* Full browser width */
+          width: 100vw;
+          overflow-x: hidden;
         }
 
         .projects-wrapper {
           max-width: 1200px;
           margin: 0 auto;
-          padding: 0 1rem;
+          width: 100%;
         }
 
         .projects-title {
@@ -58,16 +65,16 @@ const Projects = () => {
           display: flex;
           flex-wrap: wrap;
           justify-content: center;
-          gap: 3rem;
+          gap: 2rem;
         }
 
         .project-card {
           background-color: #111;
           padding: 1.5rem;
           border-radius: 12px;
-          width: 350px;
+          width: 320px;
           height: 280px;
-          box-shadow: 0 4px 12px rgba(255,255,255,0.1);
+          box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
           transition: transform 0.3s ease, box-shadow 0.3s ease;
           animation: fadeInUp 0.8s ease forwards;
           display: flex;
@@ -76,7 +83,7 @@ const Projects = () => {
 
         .project-card:hover {
           transform: translateY(-5px);
-          box-shadow: 0 6px 16px rgba(255,255,255,0.15);
+          box-shadow: 0 6px 16px rgba(255, 255, 255, 0.15);
         }
 
         .project-title {
@@ -132,8 +139,10 @@ const Projects = () => {
           }
         }
 
-        .projects-container + .projects-container {
-          margin-top: 2rem;
+        @media (max-width: 768px) {
+          .project-card {
+            width: 90%;
+          }
         }
       `}</style>
 
