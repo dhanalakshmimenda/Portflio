@@ -24,7 +24,7 @@ const projectData = [
   {
     name: "Portfolio Website",
     description: `A personal portfolio website created using React.js, CSS, and modern web design practices. It showcases my projects, skills, education, and contact information. The layout includes interactive animations, a responsive design, and seamless navigation using React Router.`,
-    link: "https://your-portfolio-link.netlify.app/", 
+    link: "https://portflio2024.netlify.app/", 
   },
 ];
 
